@@ -4,4 +4,9 @@
     <string name="VolCalCalculatorActivity">Volume of Rock</string>
     <string name="VibrationCalculatorActivity">Vibration</string>
     <string name="MassChargeCalculatorActivity">Mass of charge per hole</string>
+    <string name="Calculate">Calculate</string>
+    <string name="Length">Length</string>
+    <string name="Heigth">Heigth</string>
+    <string name="Width">Width</string>
+    <string name="inm">in metres</string>
 </resources>
