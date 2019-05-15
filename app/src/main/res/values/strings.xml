@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CIMFR Blast Guide</string>
+    <string name="CalculatorMainActivity">Calculator</string>
 </resources>
