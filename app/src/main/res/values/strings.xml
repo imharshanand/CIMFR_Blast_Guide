@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CIMFR Blast Guide</string>
-    <string name="CalculatorMainActivity">Calculator</string>
+    <string name="CalculatorsMainActivity">Calculators</string>
+    <string name="VolCalCalculatorActivity">Volume of Rock</string>
+    <string name="VibrationCalculatorActivity">Vibration</string>
+    <string name="MassChargeCalculatorActivity">Mass of charge per hole</string>
 </resources>
