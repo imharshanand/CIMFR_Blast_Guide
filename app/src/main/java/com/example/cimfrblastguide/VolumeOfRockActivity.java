@@ -31,20 +31,21 @@ public class VolumeOfRockActivity extends AppCompatActivity {
         Vol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double h = Double.parseDouble(H.getText().toString());
-                double l = Double.parseDouble(L.getText().toString());
-                double w = Double.parseDouble(W.getText().toString());
-                double res = h*l*w;
 
-                //if(H.getText().toString().trim().length()==0|| L.getText().toString().trim().length()==0|| W.getText().toString().trim().length()==0)
-                //{
-                //    Res.setText("Please enter all values");
-                //}
-                //else
-                //{
+                if(H.getText().toString().isEmpty() || L.getText().toString().isEmpty() || W.getText().toString().isEmpty())
+                {
+                    Res.setText("Please enter all values");
+                }
+
+                else
+                {
+                    double h = Double.parseDouble(H.getText().toString());
+                    double l = Double.parseDouble(L.getText().toString());
+                    double w = Double.parseDouble(W.getText().toString());
+                    double res = h*l*w;
                     DecimalFormat df = new DecimalFormat("#.####");
                     Res.setText(df.format(res) + " Cubic Metre");
-                //}
+                }
             }
         });
 
