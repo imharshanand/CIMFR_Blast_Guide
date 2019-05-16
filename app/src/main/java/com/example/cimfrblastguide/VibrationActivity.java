@@ -47,8 +47,8 @@ public class VibrationActivity extends AppCompatActivity {
 
                     double result = KVal*((Math.pow(DVal / (Math.sqrt(QVal)) , (-1 * bVal))));
 
-                    DecimalFormat df = new DecimalFormat("#.####");
-                    Res.setText(df.format(result) + "");
+                    DecimalFormat df = new DecimalFormat("#.###");
+                    Res.setText(df.format(result) + " mm");
                 }
             }
         });
