@@ -9,4 +9,11 @@
     <string name="Heigth">Heigth</string>
     <string name="Width">Width</string>
     <string name="inm">in metres</string>
+    <string name="constant">constant</string>
+    <string name="Result">Result</string>
+    <string name="inkg">in kg</string>
+    <string name="K">K</string>
+    <string name="Q">Q</string>
+    <string name="D">D</string>
+    <string name="b">b</string>
 </resources>
