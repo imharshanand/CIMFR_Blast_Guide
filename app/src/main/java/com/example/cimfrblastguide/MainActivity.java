@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         BlastHoleActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BlastHolesActivity.class);
+                Intent intent = new Intent(MainActivity.this, BlastHoleInputActivity.class);
                 startActivity(intent);
             }
         });
