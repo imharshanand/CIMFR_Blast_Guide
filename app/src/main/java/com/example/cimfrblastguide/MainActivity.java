@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button CalculatorMainActivity;
     private Button BlastHoleActivity;
+    private Button AboutApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BlastHoleInputActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        AboutApp = (Button)findViewById(R.id.btnAboutAppActivity);
+        AboutApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AboutAppActivity.class);
                 startActivity(intent);
             }
         });

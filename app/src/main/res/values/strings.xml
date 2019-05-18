@@ -10,6 +10,7 @@
     <string name="Width">Width</string>
     <string name="inm">in metres</string>
     <string name="inms">in ms</string>
+    <string name="about">About</string>
     <string name="constant">constant</string>
     <string name="Result">Result</string>
     <string name="inkg">in kg</string>
@@ -22,10 +23,11 @@
     <string name="numcol">No. of holes within row</string>
     <string name="ptOfinitiation">Initial Time</string>
     <string name="delayCol">Delay within Row</string>
-    <string name="delayR01">Delay between R0 - R1</string>
-    <string name="delayR12">Delay between R1 - R2</string>
-    <string name="delayR23">Delay between R2 - R3</string>
-    <string name="delayR34">Delay between R3 - R4</string>
+    <string name="delayR01">Delay between R1 - R2</string>
+    <string name="delayR12">Delay between R2 - R3</string>
+    <string name="delayR23">Delay between R3 - R4</string>
+    <string name="delayR34">Delay between R4 - R5</string>
     <string name="zero">0</string>
+    <string name="aboutDirector">Dr. Pradeep Kumar Singh is Director, CSIR-Central Institute of Mining and Fuel Research (CSIR-CIMFR), Dhanbad, a constituent Institute of Council of Scientific and Industrial Research, under the aegis of Ministry of Science and Technology, Government of India.</string>
     <string name="blank"></string>
 </resources>
