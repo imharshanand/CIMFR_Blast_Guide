@@ -64,13 +64,27 @@ public class BlastHolesActivity extends AppCompatActivity {
                         matrix[4][i]=matrix[3][i]+D34;
                     }
                 }
+
                 TVDisplayHole.setText("");
+
+                //Displaying
                 for (int i = 0; i < row; i++) {
                     for (int j = 0; j < cols; j++) {
 
                         TVDisplayHole.append(matrix[i][j] + "⓿ \t");
                     }
                     TVDisplayHole.append("\n");
+                }
+                TVDisplayHole.append("---------------------------------------------\n");
+                for (int i = 0; i < row; i++) {
+                    for (int j = 0; j < cols; j++) {
+                        for (int k = 0; k < row; k++) {
+                            for (int l = 0; l < cols; l++) {
+                                if(Math.abs(matrix[k][l]-matrix[i][j])<8&&(Math.abs(matrix[k][l]-matrix[i][j])!=0))
+                                    TVDisplayHole.append(matrix[k][l] + " AND " +matrix[i][j]+ " ++ ");
+                            }
+                        }
+                    }
                 }
                 DisplayHoles.setEnabled(false);
             }
