@@ -22,6 +22,7 @@
     <string name="Display">Display</string>
     <string name="numcol">No. of holes within row</string>
     <string name="ptOfinitiation">Initial Time</string>
+    <string name="vibrationEqu">Vibration Equation</string>
     <string name="delayCol">Delay within Row</string>
     <string name="delayR01">Delay between R1 - R2</string>
     <string name="delayR12">Delay between R2 - R3</string>
