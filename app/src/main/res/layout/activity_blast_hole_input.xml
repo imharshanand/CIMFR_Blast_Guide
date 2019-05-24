@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.81" />
 
     <EditText
         android:id="@+id/etNumColBlastLay"
@@ -29,6 +29,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center"
         android:ems="10"
         android:hint="@string/blank"
         android:importantForAutofill="no"
@@ -66,8 +67,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="@string/inms"
         android:gravity="center"
+        android:hint="@string/inms"
         android:importantForAutofill="no"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
@@ -75,7 +76,7 @@
         app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNumColBlastLay"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.049"
         tools:targetApi="o" />
 
     <TextView
@@ -83,16 +84,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/ptOfinitiation"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
+        app:layout_constraintBottom_toBottomOf="@+id/etPtInitBlastLay"
         app:layout_constraintEnd_toStartOf="@+id/etPtInitBlastLay"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNumColBlastLay"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintTop_toTopOf="@+id/etPtInitBlastLay" />
 
     <EditText
         android:id="@+id/etDelayColBlastLay"
@@ -169,119 +167,19 @@
         app:layout_constraintTop_toBottomOf="@+id/etDelayColBlastLay"
         app:layout_constraintVertical_bias="0.096" />
 
-    <EditText
-        android:id="@+id/etDelayR12BlastLay"
-        android:layout_width="172dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/inms"
-        android:gravity="center"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:text="@string/zero"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDelayR01BlastLay"
-        app:layout_constraintVertical_bias="0.088"
-        tools:targetApi="o" />
-
-    <TextView
-        android:id="@+id/textView12"
+    <Button
+        android:id="@+id/btnAddRowValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/delayR12"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
-        app:layout_constraintEnd_toStartOf="@+id/etDelayR12BlastLay"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDelayR01BlastLay"
-        app:layout_constraintVertical_bias="0.103" />
-
-    <EditText
-        android:id="@+id/etDelayR23BlastLay"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/inms"
-        android:gravity="center"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:text="@string/zero"
-        android:textAlignment="center"
+        android:text="Add Row"
         app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintHorizontal_bias="0.749"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDelayR12BlastLay"
-        app:layout_constraintVertical_bias="0.098"
-        tools:targetApi="o" />
+        app:layout_constraintTop_toBottomOf="@+id/etDelayR01BlastLay" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/delayR23"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
-        app:layout_constraintEnd_toStartOf="@+id/etDelayR23BlastLay"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDelayR12BlastLay"
-        app:layout_constraintVertical_bias="0.144" />
-
-    <EditText
-        android:id="@+id/etDelayR34BlastLay"
-        android:layout_width="172dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="@string/inms"
-        android:importantForAutofill="no"
-        android:gravity="center"
-        android:inputType="number"
-        android:text="@string/zero"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDelayR23BlastLay"
-        app:layout_constraintVertical_bias="0.13"
-        tools:targetApi="o" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/delayR34"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalculateBlastHoleInputActivity"
-        app:layout_constraintEnd_toStartOf="@+id/etDelayR34BlastLay"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDelayR23BlastLay"
-        app:layout_constraintVertical_bias="0.185" />
 </android.support.constraint.ConstraintLayout>

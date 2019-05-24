@@ -19,9 +19,8 @@
         android:layout_below="@+id/btnDisplayBlastHoleActivity">
         <TextView
             android:id="@+id/tvDisplayHoles"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_marginTop="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:scrollHorizontally="true" />
     </HorizontalScrollView>
 </RelativeLayout>
