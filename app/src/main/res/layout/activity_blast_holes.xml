@@ -15,12 +15,13 @@
 
     <HorizontalScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-            <TextView
-                android:id="@+id/tvDisplayHoles"
-                android:layout_width="400dp"
-                android:layout_height="400dp"
-                android:scrollHorizontally="true"
-                android:layout_marginTop="127dp" />
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/btnDisplayBlastHoleActivity">
+        <TextView
+            android:id="@+id/tvDisplayHoles"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="100dp"
+            android:scrollHorizontally="true" />
     </HorizontalScrollView>
 </RelativeLayout>

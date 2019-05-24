@@ -7,8 +7,8 @@
     tools:context=".AboutAppActivity">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -23,21 +23,23 @@
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/director_cimfr" />
 
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/aboutDirector"/>
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/anbout_cimfr"/>
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="422dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/aboutDirector" />
+                app:srcCompat="@drawable/about_cimfr"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
