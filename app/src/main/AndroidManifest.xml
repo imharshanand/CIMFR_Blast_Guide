@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutAppActivity"></activity>
+        <activity android:name=".AboutDevelopers"></activity>
+        <activity android:name=".AboutDepartment" />
+        <activity android:name=".AboutMain" />
+        <activity android:name=".AboutAppActivity" />
         <activity android:name=".BlastHoleInputActivity" />
         <activity android:name=".BlastHolesActivity" />
         <activity android:name=".MassChargeActivity" />
