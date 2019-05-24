@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private Button CalculatorMainActivity;
     private Button BlastHoleActivity;
     private Button AboutApp;
+    private Button Regulatory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AboutMain.class);
                 startActivity(intent);
+            }
+        });
+        Regulatory = (Button)findViewById(R.id.btnRegulatory);
+        Regulatory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Regulatory.class);
+                startActivity(intent);
+
             }
         });
     }
