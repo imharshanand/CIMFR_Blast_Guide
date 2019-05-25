@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button BlastHoleActivity;
     private Button AboutApp;
     private Button Regulatory;
+    private Button Explosive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Regulatory.class);
                 startActivity(intent);
 
+            }
+        });
+        Explosive = (Button)findViewById(R.id.btnExplosiveMain);
+        Explosive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExplosiveMain.class);
+                startActivity(intent);
             }
         });
     }

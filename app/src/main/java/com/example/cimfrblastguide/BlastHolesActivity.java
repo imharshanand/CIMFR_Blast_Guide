@@ -28,45 +28,52 @@ public class BlastHolesActivity extends AppCompatActivity {
                 String col = intent.getStringExtra("passcol");
                 String addRowTransfer = intent.getStringExtra("rowAddPass");
 
-                int row = addRowTransfer.replaceAll("[^ ]", "").length();
-
-                String s[] = addRowTransfer.split(" ");
-                int ary[] = new int[s.length];
-                for(int i = 0 ; i < s.length ; i++)
-                    ary[i] = Integer.parseInt(s[i]);
-
-
-
-                int colDelay = Integer.parseInt(delayCol);
-                int cols = Integer.parseInt(col);
-                int[][] matrix = new int[row][cols];
-
-                matrix[0][0]= Integer.parseInt(ini);
-
-                for (int i = 1; i < cols; i++)
+                if(addRowTransfer.trim()=="")
                 {
-                    matrix[0][i]=matrix[0][i-1]+colDelay;
+                    TVDisplayHole.append("Please go back and add rows");
+                    DisplayHoles.setEnabled(false);
                 }
-
-                for(int p=1; p<row; p++)
+                else
                 {
-                    for (int i = 0; i < cols; i++) {
-                        matrix[p][i] = matrix[p-1][i] + ary[p - 1];
+                    int row = addRowTransfer.replaceAll("[^ ]", "").length()+1;
+
+                    String s[] = addRowTransfer.split(" ");
+                    int ary[] = new int[s.length];
+                    for(int i = 0 ; i < s.length ; i++)
+                        ary[i] = Integer.parseInt(s[i]);
+
+
+
+                    int colDelay = Integer.parseInt(delayCol);
+                    int cols = Integer.parseInt(col);
+                    int[][] matrix = new int[row][cols];
+
+                    matrix[0][0]= Integer.parseInt(ini);
+
+                    for (int i = 1; i < cols; i++)
+                    {
+                        matrix[0][i]=matrix[0][i-1]+colDelay;
                     }
-                }
 
-
-                TVDisplayHole.setText("");
-
-                //Displaying
-                for (int i = 0; i < row; i++) {
-                    for (int j = 0; j < cols; j++) {
-                        TVDisplayHole.append(matrix[i][j] + "⓿ \t");
+                    for(int p=1; p<row; p++)
+                    {
+                        for (int i = 0; i < cols; i++) {
+                            matrix[p][i] = matrix[p-1][i] + ary[p - 1];
+                        }
                     }
-                    TVDisplayHole.append("\n");
-                }
-                DisplayHoles.setEnabled(false);
 
+
+                    TVDisplayHole.setText("");
+
+                    //Displaying
+                    for (int i = 0; i < row; i++) {
+                        for (int j = 0; j < cols; j++) {
+                            TVDisplayHole.append(matrix[i][j] + "⓿ \t");
+                        }
+                        TVDisplayHole.append("\n");
+                    }
+                    DisplayHoles.setEnabled(false);
+                }
             }
         });
     }

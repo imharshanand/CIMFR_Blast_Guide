@@ -45,7 +45,7 @@ public class BlastHoleInputActivity extends AppCompatActivity {
                 String col = ETNumCol.getText().toString();
                 String ini = ETInitial.getText().toString();
                 String delayCol = ETDelayCol.getText().toString();
-                String delay01 = ETDelayR01.getText().toString();
+                //String delay01 = ETDelayR01.getText().toString();
 
                 String addRowTransfer = addRow;
 

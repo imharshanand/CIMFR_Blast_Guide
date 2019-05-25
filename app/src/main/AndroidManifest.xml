@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Regulatory"></activity>
+        <activity android:name=".ANFOExpo"></activity>
+        <activity android:name=".PermitExplosive" />
+        <activity android:name=".CastBoostExplosive" />
+        <activity android:name=".LargeDiaExplosive" />
+        <activity android:name=".BulkExplosive" />
+        <activity android:name=".ExplosiveMain" />
+        <activity android:name=".Regulatory" />
         <activity android:name=".AboutDevelopers" />
         <activity android:name=".AboutDepartment" />
         <activity android:name=".AboutMain" />
