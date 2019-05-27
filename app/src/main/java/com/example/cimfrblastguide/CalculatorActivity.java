@@ -11,6 +11,7 @@ public class CalculatorActivity extends AppCompatActivity {
     private Button volumeOfRock;
     private Button Vibration;
     private Button MassCharge;
+    private Button EstDesignPara;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,14 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CalculatorActivity.this, MassChargeActivity.class);
+                startActivity(intent);
+            }
+        });
+        EstDesignPara = (Button)findViewById(R.id.btnEstDesignParaCalculatorActivity);
+        EstDesignPara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalculatorActivity.this, EstDesignPara.class);
                 startActivity(intent);
             }
         });

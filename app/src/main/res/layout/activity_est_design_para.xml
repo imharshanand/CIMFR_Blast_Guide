@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EstDesignPara">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        tools:context=".EstDesignPara">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/cph_equ"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/vol_equ"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/spec_charge_equ"/>
+            <TextView
+                android:text="Diameter of hole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/DiaHoleEstDesign"
+                android:hint="@string/mm"
+                android:inputType="numberDecimal"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Diameter of Explosive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/DiaExpoEstDesign"
+                android:hint="@string/mm"
+                android:inputType="numberDecimal"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Desnity of Explosive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/DensityExpoEstDesign"
+                android:hint="in g/cc"
+                android:inputType="numberDecimal"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Burden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/BurdenEstDesign"
+                android:hint="@string/inm"
+                android:layout_width="200dp"
+                android:inputType="numberDecimal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Spacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/SpacingEstDesign"
+                android:hint="@string/inm"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Depth of Hole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/DepthHoleEstDesign"
+                android:hint="@string/inm"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Subgrade (if applicable)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/SubgradeEstDesign"
+                android:hint="@string/inm"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Deck (if applicable)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/DeckEstDesign"
+                android:hint="@string/inm"
+                android:layout_width="200dp"
+                android:inputType="numberDecimal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Stemming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/StemEstDesign"
+                android:layout_width="200dp"
+                android:inputType="numberDecimal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="OUTPUT"
+                android:textColor="@color/black"
+                android:layout_gravity="center" />
+            <TextView
+                android:id="@+id/tvChargeHoleEstDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Charge per hole"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/btnChargeHoleEstDesign"
+                android:layout_width="300dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Charge per hole"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvVolumeEstDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Volume"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/btnVolumeEstDesign"
+                android:layout_width="300dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Volume"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvSpeChargeEstDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Specific Charge"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/btnSpeChargeEstDesign"
+                android:layout_width="300dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_height="wrap_content"
+                android:text="Specific Charge"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
