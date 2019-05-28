@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class EstDesignPara extends AppCompatActivity {
     private Button BTNChargeHole;
     private Button BTNVolume;
@@ -48,9 +50,9 @@ public class EstDesignPara extends AppCompatActivity {
         BTNChargeHole.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ETDiaHole.getText().toString().isEmpty())
+                if(ETDepthHole.getText().toString().isEmpty())
                 {
-                    TVChargeHole.setText("Please enter Diameter of Hole");
+                    TVChargeHole.setText("Please enter Depth of Hole");
                 }
                 else if(ETStem.getText().toString().isEmpty())
                 {
@@ -70,13 +72,15 @@ public class EstDesignPara extends AppCompatActivity {
                 }
                 else
                 {
-                    double DiaHole = Double.parseDouble(ETDiaHole.getText().toString());
                     double Stem = Double.parseDouble(ETStem.getText().toString());
                     double Deck = Double.parseDouble(ETDeck.getText().toString());
+                    double HoleDepth = Double.parseDouble(ETDepthHole.getText().toString());
                     double DiaExpo = Double.parseDouble(ETDiaExpo.getText().toString());
                     double DensityExpo = Double.parseDouble(ETDensityExpo.getText().toString());
-                    double ResCPH = (DiaHole-Stem-Deck)*(Math.PI/4000000000.00)*DiaExpo*DiaExpo*DensityExpo;
-                    TVChargeHole.setText(ResCPH + "");
+                    double ResCPH = (HoleDepth-Stem-Deck)*(Math.PI/4000.00)*DiaExpo*DiaExpo*DensityExpo;
+
+                    DecimalFormat d1 = new DecimalFormat("#.####");
+                    TVChargeHole.setText(d1.format(ResCPH) + "");
                 }
             }
         });
@@ -84,9 +88,9 @@ public class EstDesignPara extends AppCompatActivity {
         BTNVolume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ETDiaHole.getText().toString().isEmpty())
+                if(ETDepthHole.getText().toString().isEmpty())
                 {
-                    TVVolume.setText("Please enter Diameter of hole");
+                    TVVolume.setText("Please enter Depth of hole");
                 }
                 else if(ETSubgrade.getText().toString().isEmpty())
                 {
@@ -102,12 +106,14 @@ public class EstDesignPara extends AppCompatActivity {
                 }
                 else
                 {
-                    double DiaHole = Double.parseDouble(ETDiaHole.getText().toString());
                     double Subgrade = Double.parseDouble(ETSubgrade.getText().toString());
+                    double HoleDepth = Double.parseDouble(ETDepthHole.getText().toString());
                     double Burden = Double.parseDouble(ETBurden.getText().toString());
                     double Spacing = Double.parseDouble(ETSpacing.getText().toString());
-                    double ResVol = (DiaHole - Subgrade)*Burden*Spacing;
-                    TVVolume.setText(ResVol+"");
+                    double ResVol = (HoleDepth - Subgrade)*Burden*Spacing;
+
+                    DecimalFormat d2= new DecimalFormat("#.####");
+                    TVVolume.setText(d2.format(ResVol) + "");
                 }
             }
         });
@@ -115,9 +121,9 @@ public class EstDesignPara extends AppCompatActivity {
         BTNSpecificCharge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ETDiaHole.getText().toString().isEmpty())
+                if(ETDepthHole.getText().toString().isEmpty())
                 {
-                    TVSpecificCharge.setText("Please enter Diameter of Hole");
+                    TVSpecificCharge.setText("Please enter Depth of Hole");
                 }
                 else if(ETStem.getText().toString().isEmpty())
                 {
@@ -149,21 +155,23 @@ public class EstDesignPara extends AppCompatActivity {
                 }
                 else
                 {
-                    double DiaHole = Double.parseDouble(ETDiaHole.getText().toString());
                     double Stem = Double.parseDouble(ETStem.getText().toString());
                     double Deck = Double.parseDouble(ETDeck.getText().toString());
                     double DiaExpo = Double.parseDouble(ETDiaExpo.getText().toString());
                     double DensityExpo = Double.parseDouble(ETDensityExpo.getText().toString());
+                    double HoleDepth = Double.parseDouble(ETDepthHole.getText().toString());
 
                     double Subgrade = Double.parseDouble(ETSubgrade.getText().toString());
                     double Burden = Double.parseDouble(ETBurden.getText().toString());
                     double Spacing = Double.parseDouble(ETSpacing.getText().toString());
 
-                    double ResCPH = (DiaHole-Stem-Deck)*(Math.PI/4000000000.00)*DiaExpo*DiaExpo*DensityExpo;
-                    double ResVol = (DiaHole - Subgrade)*Burden*Spacing;
+                    double ResCPH = (HoleDepth-Stem-Deck)*(Math.PI/4000.00)*DiaExpo*DiaExpo*DensityExpo;
+                    double ResVol = (HoleDepth - Subgrade)*Burden*Spacing;
 
                     double ResSpeCharge = ResCPH/ResVol;
-                    TVSpecificCharge.setText(ResSpeCharge+"");
+
+                    DecimalFormat d3 = new DecimalFormat("#.####");
+                    TVSpecificCharge.setText(d3.format(ResSpeCharge) + "");
                 }
             }
         });

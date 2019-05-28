@@ -12,6 +12,7 @@ public class CalculatorActivity extends AppCompatActivity {
     private Button Vibration;
     private Button MassCharge;
     private Button EstDesignPara;
+    private Button LinearChargeDensity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,15 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CalculatorActivity.this, EstDesignPara.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearChargeDensity = (Button)findViewById(R.id.btnLinearChargeDensityActivity);
+        LinearChargeDensity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CalculatorActivity.this, LinearChargeDensity.class);
                 startActivity(intent);
             }
         });
