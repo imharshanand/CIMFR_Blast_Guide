@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LargeDiaExplosive">
+    tools:context=".EmulsionBoostExp">
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="370dp"
-        android:layout_height="259dp"
+        android:id="@+id/imageView11"
+        android:layout_width="371dp"
+        android:layout_height="311dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -18,5 +18,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/large_dia_expo" />
+        app:srcCompat="@drawable/emulsion_booster" />
 </android.support.constraint.ConstraintLayout>

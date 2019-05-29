@@ -38,11 +38,22 @@
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="122dp" />
     <Button
-        android:id="@+id/btnCastBooster"
+        android:id="@+id/btnEmulsionBooster"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/btnLargeDiaExplosive"
+        android:layout_marginTop="50dp"
+        android:text="Emulsion Booster"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="122dp" />
+    <Button
+        android:id="@+id/btnCastBooster"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnEmulsionBooster"
         android:layout_marginTop="50dp"
         android:text="Cast Booster"
         android:textStyle="bold"

@@ -12,6 +12,7 @@ public class ExplosiveMain extends AppCompatActivity {
     private Button CastBoosterExp;
     private Button PermitExp;
     private Button ANFO;
+    private Button Emulsion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class ExplosiveMain extends AppCompatActivity {
         CastBoosterExp = (Button)findViewById(R.id.btnCastBooster);
         PermitExp = (Button)findViewById(R.id.btnPermitExplosive);
         ANFO = (Button)findViewById(R.id.btnANFOExp);
+        Emulsion = (Button)findViewById(R.id.btnEmulsionBooster);
 
         BulkExp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +57,13 @@ public class ExplosiveMain extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ExplosiveMain.this, ANFOExpo.class);
+                startActivity(intent);
+            }
+        });
+        Emulsion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ExplosiveMain.this, EmulsionBoostExp.class);
                 startActivity(intent);
             }
         });
