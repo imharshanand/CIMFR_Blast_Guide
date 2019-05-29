@@ -6,40 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".AboutAppActivity">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.github.barteksc.pdfviewer.PDFView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="350dp"
-                android:layout_height="185dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/director_cimfr" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/aboutDirector"/>
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/about_cimfr"/>
-        </LinearLayout>
-    </ScrollView>
 </RelativeLayout>
