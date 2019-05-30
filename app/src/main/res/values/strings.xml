@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CIMFR Blast Guide</string>
+    <string name="appname">CIMFR Blast Guide</string>
+    <string name="app_version">Version 1.0</string>
     <string name="CalculatorsMainActivity">Calculators</string>
     <string name="VolCalCalculatorActivity">Volume of Rock</string>
     <string name="VibrationCalculatorActivity">Prediction of Vibration</string>
