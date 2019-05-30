@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">CIMFR Blast Guide</string>
-    <string name="appname">CIMFR Blast Guide</string>
-    <string name="app_version">Version 1.0</string>
+    <string name="app_version">CIMFR Blast Guide Version 1.0</string>
     <string name="CalculatorsMainActivity">Calculators</string>
     <string name="VolCalCalculatorActivity">Volume of Rock</string>
     <string name="VibrationCalculatorActivity">Prediction of Vibration</string>
@@ -11,12 +10,7 @@
     <string name="Heigth">Heigth</string>
     <string name="Width">Width</string>
     <string name="inm">in metres</string>
-    <string name="regulatory1">DGMS standard for a permissible limit of ground vibration (Technical Circular Number 7 of 1997)</string>
     <string name="inms">in ms</string>
-    <string name="regulatory3">Table : Perceptible limits of continuous vibration levels</string>
-    <string name="regulatory4">Table: Physical properties of Emulsion matrix</string>
-    <string name="regulatory5">Table : Explosive properties of gassed emulsion</string>
-    <string name="regulatory2">Table : US Bureau of Mines standard of damage due to air overpressure</string>
     <string name="about">About</string>
     <string name="constant">constant</string>
     <string name="Result">Result</string>
