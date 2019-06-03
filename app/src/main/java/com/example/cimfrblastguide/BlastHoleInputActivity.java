@@ -36,30 +36,45 @@ public class BlastHoleInputActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String btnAddRows = ETDelayR01.getText().toString().trim();
-                addRow = addRow + btnAddRows + " ";
-                ETDelayR01.setText("");
+                if(ETDelayR01.getText().toString().isEmpty())
+                    ETDelayR01.setText("");
+                else{
+                    addRow = addRow + btnAddRows + " ";
+                    ETDelayR01.setText("");
+                }
             }
         });
 
         CalBlastHoleInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String col = ETNumCol.getText().toString();
-                String ini = ETInitial.getText().toString();
-                String delayCol = ETDelayCol.getText().toString();
-                //String delay01 = ETDelayR01.getText().toString();
-                String maxDelay = MaxDelay.getText().toString();
 
-                String addRowTransfer = addRow;
+                if(ETNumCol.getText().toString().isEmpty())
+                    ETNumCol.setText("");
+                else if (ETInitial.getText().toString().isEmpty())
+                    ETInitial.setText("");
+                else if (ETDelayCol.getText().toString().isEmpty())
+                    ETDelayCol.setText("");
+                else if (MaxDelay.getText().toString().isEmpty())
+                    MaxDelay.setText("");
+                else
+                {
+                    String col = ETNumCol.getText().toString();
+                    String ini = ETInitial.getText().toString();
+                    String delayCol = ETDelayCol.getText().toString();
+                    String maxDelay = MaxDelay.getText().toString();
 
-                Intent intent = new Intent(BlastHoleInputActivity.this, BlastHolesActivity.class);
-                intent.putExtra("passcol", col);
-                intent.putExtra("passini", ini);
-                intent.putExtra("passdelayCol", delayCol);
-                intent.putExtra("rowAddPass",addRowTransfer);
-                intent.putExtra("maxDelayPass",maxDelay);
+                    String addRowTransfer = addRow;
 
-                startActivity(intent);
+                    Intent intent = new Intent(BlastHoleInputActivity.this, BlastHolesActivity.class);
+                    intent.putExtra("passcol", col);
+                    intent.putExtra("passini", ini);
+                    intent.putExtra("passdelayCol", delayCol);
+                    intent.putExtra("rowAddPass",addRowTransfer);
+                    intent.putExtra("maxDelayPass",maxDelay);
+
+                    startActivity(intent);
+                }
             }
         });
     }

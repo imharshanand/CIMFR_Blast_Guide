@@ -114,6 +114,19 @@ public class BlastHolesActivity extends AppCompatActivity {
                         }
                         TVDisplayHole.append("\n");
                     }
+
+                    TVDisplayHole.append("\n \n \n");
+                    TVDisplayHole.append("Maximum delay window is: "+maxDelay+" ms \n");
+
+                    for (int i = 0; i < row; i++) {
+                        for (int j = 0; j < cols; j++) {
+                            if (matrixFlag[i][j] == 1) {
+                                TVDisplayHole.append(matrix[i][j] + "");
+                                TVDisplayHole.append(" \t");
+                            }
+                        }
+                        TVDisplayHole.append("\n");
+                    }
                     DisplayHoles.setEnabled(false);
                 }
             }

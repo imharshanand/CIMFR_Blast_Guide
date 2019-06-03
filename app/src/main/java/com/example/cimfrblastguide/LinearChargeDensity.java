@@ -27,12 +27,19 @@ public class LinearChargeDensity extends AppCompatActivity {
         Cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double CDNum = Double.parseDouble(CD.getText().toString());
-                double DENum = Double.parseDouble(DE.getText().toString());
-                double Result = (Math.PI*CDNum*CDNum*DENum)/4000.00;
+                if(CD.getText().toString().isEmpty())
+                    Res.setText("Enter Charge Diameter");
+                else if (DE.getText().toString().isEmpty())
+                    Res.setText("Enter Density of Explosive");
+                else
+                {
+                    double CDNum = Double.parseDouble(CD.getText().toString());
+                    double DENum = Double.parseDouble(DE.getText().toString());
+                    double Result = (Math.PI*CDNum*CDNum*DENum)/4000.00;
 
-                DecimalFormat d1 = new DecimalFormat("#.####");
-                Res.setText(d1.format(Result) + " kg/m");
+                    DecimalFormat d1 = new DecimalFormat("#.####");
+                    Res.setText(d1.format(Result) + " kg/m");
+                }
             }
         });
     }
