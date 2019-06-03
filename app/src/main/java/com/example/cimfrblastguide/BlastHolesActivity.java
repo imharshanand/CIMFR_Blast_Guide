@@ -1,7 +1,11 @@
 package com.example.cimfrblastguide;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,7 +28,8 @@ public class BlastHolesActivity extends AppCompatActivity {
                 Intent intent = getIntent();
                 String ini = intent.getStringExtra("passini");
                 String delayCol = intent.getStringExtra("passdelayCol");
-
+                String maxDelay = intent.getStringExtra("maxDelayPass");
+                int MaxDelay = Integer.parseInt(maxDelay); //MaxDelay is the Minimum Difference
                 String col = intent.getStringExtra("passcol");
                 String addRowTransfer = intent.getStringExtra("rowAddPass");
 
@@ -64,32 +69,50 @@ public class BlastHolesActivity extends AppCompatActivity {
 
 
                     TVDisplayHole.setText("");
+                    int[][] matrixFlag= new int[row][cols];
 
-                    //Displaying
                     for (int i = 0; i < row; i++) {
                         for (int j = 0; j < cols; j++) {
-                            TVDisplayHole.append(matrix[i][j] + "⓿ \t");
+                            matrixFlag[i][j] =0;
                         }
-                        TVDisplayHole.append("\n");
                     }
-
-                    TVDisplayHole.append("\n\n\n");
 
                     for (int i = 0; i < row; i++) {
                         for (int j = 0; j < cols; j++) {
                             for (int k = 0; k < row; k++) {
                                 for (int l = 0; l < cols; l++) {
-                                    if((Math.abs(matrix[k][l]-matrix[i][j])<8) &&(Math.abs(matrix[k][l]-matrix[i][j])!=0))
-                                    {
-                                        if(i==k && l==j)
-                                            TVDisplayHole.append("");
-                                        else
-                                            TVDisplayHole.append(matrix[k][l] + " AND " +matrix[i][j]+ "  ");
+                                    if ((Math.abs(matrix[k][l] - matrix[i][j]) < MaxDelay) && (Math.abs(matrix[k][l] - matrix[i][j]) != 0)) {
+                                        if(i!=k && l!=j)
+                                            matrixFlag[k][l] = 1;
                                     }
                                 }
-                                TVDisplayHole.append("\n");
                             }
                         }
+                    }
+                    String Hole = "⓿";
+
+                    //Displaying
+                    for (int i = 0; i < row; i++) {
+                        for (int j = 0; j < cols; j++) {
+                            if(matrixFlag[i][j]==1)
+                            {
+                                TVDisplayHole.append(matrix[i][j]+"");
+                                SpannableString HoleRED = new SpannableString(Hole);
+                                HoleRED.setSpan(new ForegroundColorSpan(Color.RED), 0, Hole.length(), 0);
+                                TVDisplayHole.append(HoleRED);
+                                TVDisplayHole.append(" \t");
+                            }
+
+                            else if(matrixFlag[i][j]==0)
+                            {
+                                TVDisplayHole.append(matrix[i][j]+"");
+                                SpannableString HoleBLACK = new SpannableString(Hole);
+                                HoleBLACK.setSpan(new ForegroundColorSpan(Color.BLACK),0, Hole.length(), 0);
+                                TVDisplayHole.append(HoleBLACK);
+                                TVDisplayHole.append(" \t");
+                            }
+                        }
+                        TVDisplayHole.append("\n");
                     }
                     DisplayHoles.setEnabled(false);
                 }

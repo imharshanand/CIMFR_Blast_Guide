@@ -14,6 +14,7 @@ public class BlastHoleInputActivity extends AppCompatActivity {
     private EditText ETInitial;
     private EditText ETDelayCol;
     private EditText ETDelayR01;
+    private EditText MaxDelay;
 
     private String strRowValues;
     private Button AddRow;
@@ -28,6 +29,7 @@ public class BlastHoleInputActivity extends AppCompatActivity {
         ETInitial = (EditText)findViewById(R.id.etPtInitBlastLay);
         ETDelayCol = (EditText)findViewById(R.id.etDelayColBlastLay);
         ETDelayR01 = (EditText)findViewById(R.id.etDelayR01BlastLay);
+        MaxDelay = (EditText)findViewById(R.id.etMaxDelay);
 
         AddRow = (Button)findViewById(R.id.btnAddRowValue);
         AddRow.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +48,7 @@ public class BlastHoleInputActivity extends AppCompatActivity {
                 String ini = ETInitial.getText().toString();
                 String delayCol = ETDelayCol.getText().toString();
                 //String delay01 = ETDelayR01.getText().toString();
+                String maxDelay = MaxDelay.getText().toString();
 
                 String addRowTransfer = addRow;
 
@@ -54,6 +57,7 @@ public class BlastHoleInputActivity extends AppCompatActivity {
                 intent.putExtra("passini", ini);
                 intent.putExtra("passdelayCol", delayCol);
                 intent.putExtra("rowAddPass",addRowTransfer);
+                intent.putExtra("maxDelayPass",maxDelay);
 
                 startActivity(intent);
             }
