@@ -204,7 +204,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Max Delay Window"
+        android:text="Delay Window"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/etMaxDelay"
         app:layout_constraintEnd_toStartOf="@+id/etMaxDelay"
