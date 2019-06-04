@@ -8,9 +8,15 @@
     android:backgroundTintMode="src_over"
     tools:context=".CalculatorActivity">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        tools:context=".CalculatorActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <Button
@@ -59,6 +65,8 @@
             android:gravity="center"
             android:textStyle="bold"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
             android:text="Linerar Charge Density"/>
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

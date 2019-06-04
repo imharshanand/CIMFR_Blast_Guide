@@ -35,7 +35,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:text="ANFO"
             tools:layout_editor_absoluteX="161dp"
