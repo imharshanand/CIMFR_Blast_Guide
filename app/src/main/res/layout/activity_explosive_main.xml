@@ -9,82 +9,90 @@
     android:backgroundTintMode="src_over"
     tools:context=".ExplosiveMain">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvExpoDescibe"
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Technical Properties"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="#000000"/>
-    <Button
-        android:id="@+id/btnBulkExplosive"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tvExpoDescibe"
-        android:layout_marginTop="30dp"
-        android:text="Bulk Explosive (SME)"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
-    <Button
-        android:id="@+id/btnLargeDiaExplosive"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnBulkExplosive"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Large Diameter Explosive"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
-    <Button
-        android:id="@+id/btnCastBooster"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnLargeDiaExplosive"
-        android:layout_marginTop="50dp"
-        android:text="Cast Booster"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
+        tools:context=".ExplosiveMain">
 
-    <Button
-        android:id="@+id/btnEmulsionBooster"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnCastBooster"
-        android:layout_marginTop="50dp"
-        android:text="Emulsion Booster"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnPermitExplosive"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnEmulsionBooster"
-        android:layout_marginTop="50dp"
-        android:text="Permitted Explosive"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
-    <Button
-        android:id="@+id/btnANFOExp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnPermitExplosive"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold"
-        android:text="ANFO"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="122dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvExpoDescibe"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Technical Properties"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#000000"/>
+        <Button
+            android:id="@+id/btnANFOExp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:text="ANFO"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="122dp" />
+        <Button
+            android:id="@+id/btnBulkExplosive"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Bulk Explosive (SME)"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="122dp" />
+        <Button
+            android:id="@+id/btnLargeDiaExplosive"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Large Diameter Explosive"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="122dp" />
+        <Button
+            android:id="@+id/btnCastBooster"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Cast Booster"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="122dp" />
+
+        <Button
+            android:id="@+id/btnEmulsionBooster"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Emulsion Booster"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="122dp" />
+
+        <Button
+            android:id="@+id/btnPermitExplosive"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Permitted Explosive"
+            android:textStyle="bold"
+            android:layout_marginBottom="50dp"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="122dp" />
+    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

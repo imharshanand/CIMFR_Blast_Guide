@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
     tools:context=".BlastInitSystem">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/ElectricInitSys"
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Electric Detonator" />
+
+        <Button
+            android:id="@+id/DetInitSys"
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Detonating Cord &amp; Cord Relay" />
+
+        <Button
+            android:id="@+id/NonelInitSys"
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Nonel Initiation System" />
+
+        <Button
+            android:id="@+id/ElectronicInitSys"
+            android:layout_width="300dp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Electronic Detonator" />
+    </LinearLayout>
+</RelativeLayout>
