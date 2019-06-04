@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EmulsionBoostExp"></activity>
+        <activity android:name=".BlastInitSystem"></activity>
+        <activity android:name=".EmulsionBoostExp" />
         <activity android:name=".LinearChargeDensity" />
         <activity android:name=".EstDesignPara" />
         <activity android:name=".ANFOExpo" />

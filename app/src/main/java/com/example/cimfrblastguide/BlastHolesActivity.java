@@ -20,7 +20,7 @@ public class BlastHolesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blast_holes);
-        DisplayHoles = (Button)findViewById(R.id.btnDisplayBlastHoleActivity);
+        DisplayHoles  = (Button)findViewById(R.id.btnDisplayBlastHoleActivity);
         TVDisplayHole = (TextView)findViewById(R.id.tvDisplayHoles);
         DisplayHoles.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +116,7 @@ public class BlastHolesActivity extends AppCompatActivity {
                     }
 
                     TVDisplayHole.append("\n \n \n");
-                    TVDisplayHole.append("Maximum delay window is: "+maxDelay+" ms \n");
+                    TVDisplayHole.append("Delay Window: "+maxDelay+" ms \n \n");
 
                     for (int i = 0; i < row; i++) {
                         for (int j = 0; j < cols; j++) {

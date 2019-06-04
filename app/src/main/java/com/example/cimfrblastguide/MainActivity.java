@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button Regulatory;
     private Button Explosive;
     private Button EstPara;
+    private Button BlastInitSystem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, EstDesignPara.class);
+                startActivity(intent);
+            }
+        });
+        BlastInitSystem = (Button)findViewById(R.id.btnBlastInitSystem);
+        BlastInitSystem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BlastInitSystem.class);
                 startActivity(intent);
             }
         });
