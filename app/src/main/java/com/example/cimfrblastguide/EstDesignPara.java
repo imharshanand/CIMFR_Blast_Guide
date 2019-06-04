@@ -80,7 +80,7 @@ public class EstDesignPara extends AppCompatActivity {
                     double ResCPH = (HoleDepth-Stem-Deck)*(Math.PI/4000.00)*DiaExpo*DiaExpo*DensityExpo;
 
                     DecimalFormat d1 = new DecimalFormat("#.####");
-                    TVChargeHole.setText(d1.format(ResCPH) + "");
+                    TVChargeHole.setText(d1.format(ResCPH) + " kg");
                 }
             }
         });
@@ -113,7 +113,7 @@ public class EstDesignPara extends AppCompatActivity {
                     double ResVol = (HoleDepth - Subgrade)*Burden*Spacing;
 
                     DecimalFormat d2= new DecimalFormat("#.####");
-                    TVVolume.setText(d2.format(ResVol) + "");
+                    TVVolume.setText(d2.format(ResVol) + " cubic meter");
                 }
             }
         });
@@ -171,7 +171,7 @@ public class EstDesignPara extends AppCompatActivity {
                     double ResSpeCharge = ResCPH/ResVol;
 
                     DecimalFormat d3 = new DecimalFormat("#.####");
-                    TVSpecificCharge.setText(d3.format(ResSpeCharge) + "");
+                    TVSpecificCharge.setText(d3.format(ResSpeCharge) + " kg per cubic meter");
                 }
             }
         });
