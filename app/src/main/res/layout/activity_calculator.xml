@@ -37,7 +37,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:layout_height="wrap_content"
-            android:text="Linerar Charge Density"/>
+            android:text="Linear Charge Density"/>
         <Button
             android:id="@+id/btnMassChargeCalculatorActivity"
             android:layout_width="300dp"
