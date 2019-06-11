@@ -35,21 +35,17 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:textStyle="bold"
-            android:text="ANFO"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="122dp" />
+            android:text="ANFO"/>
         <Button
             android:id="@+id/btnBulkExplosive"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:text="Bulk Explosive (SME)"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="122dp" />
+            android:textStyle="bold"/>
         <Button
             android:id="@+id/btnLargeDiaExplosive"
             android:layout_width="300dp"
@@ -57,9 +53,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="Large Diameter Explosive"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="122dp" />
+            android:textStyle="bold"/>
         <Button
             android:id="@+id/btnCastBooster"
             android:layout_width="300dp"
@@ -67,9 +61,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="Cast Booster"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="122dp" />
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btnEmulsionBooster"
@@ -78,9 +70,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="Emulsion Booster"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="122dp" />
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btnPermitExplosive"
@@ -90,9 +80,7 @@
             android:layout_marginTop="50dp"
             android:text="Permitted Explosive"
             android:textStyle="bold"
-            android:layout_marginBottom="50dp"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="122dp" />
+            android:layout_marginBottom="50dp"/>
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

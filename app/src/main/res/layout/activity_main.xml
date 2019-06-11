@@ -29,12 +29,12 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btnBlastActivity"
+                android:id="@+id/btnBlastDesignPara"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:text="@string/BlastActivit"
+                android:text="Blast Design Parameters"
                 android:textStyle="bold" />
 
             <Button
@@ -56,12 +56,12 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btnBlastDesignPara"
+                android:id="@+id/btnBlastActivity"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:text="Blast Design Parameters"
+                android:text="@string/BlastActivit"
                 android:textStyle="bold" />
 
             <Button
@@ -80,6 +80,16 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:text="@string/about"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnDisclamer"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="DISCLAIMER"
+                android:layout_marginBottom="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

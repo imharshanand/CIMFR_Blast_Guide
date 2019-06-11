@@ -30,15 +30,14 @@
             android:text="@string/VolCalCalculatorActivity" />
 
         <Button
-            android:id="@+id/btnVibrationCalculatorActivity"
+            android:id="@+id/btnLinearChargeDensityActivity"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:textStyle="bold"
             android:gravity="center"
-            android:text="@string/VibrationCalculatorActivity" />
-
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Linerar Charge Density"/>
         <Button
             android:id="@+id/btnMassChargeCalculatorActivity"
             android:layout_width="300dp"
@@ -48,6 +47,7 @@
             android:textStyle="bold"
             android:layout_height="wrap_content"
             android:text="@string/MassChargeCalculatorActivity"/>
+
         <Button
             android:id="@+id/btnEstDesignParaCalculatorActivity"
             android:layout_width="300dp"
@@ -57,16 +57,18 @@
             android:textStyle="bold"
             android:layout_height="wrap_content"
             android:text="Estimation of Design Parameter"/>
+
         <Button
-            android:id="@+id/btnLinearChargeDensityActivity"
+            android:id="@+id/btnVibrationCalculatorActivity"
             android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:gravity="center"
+            android:layout_marginBottom="20dp"
             android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="Linerar Charge Density"/>
+            android:gravity="center"
+            android:text="@string/VibrationCalculatorActivity" />
+
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>
