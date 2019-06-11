@@ -48,15 +48,6 @@
             android:layout_height="wrap_content"
             android:text="@string/MassChargeCalculatorActivity"/>
 
-        <Button
-            android:id="@+id/btnEstDesignParaCalculatorActivity"
-            android:layout_width="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:text="Estimation of Design Parameter"/>
 
         <Button
             android:id="@+id/btnVibrationCalculatorActivity"
