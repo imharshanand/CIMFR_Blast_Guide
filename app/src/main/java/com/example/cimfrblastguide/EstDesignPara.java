@@ -7,12 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import java.text.DecimalFormat;
 
 public class EstDesignPara extends AppCompatActivity {
+    private Button BTNDepthHole;
     private Button BTNChargeHole;
     private Button BTNVolume;
     private Button BTNSpecificCharge;
+    private TextView TVDepthHole;
     private TextView TVChargeHole;
     private TextView TVVolume;
     private TextView TVSpecificCharge;
@@ -31,9 +34,12 @@ public class EstDesignPara extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_est_design_para);
+
+        BTNDepthHole = (Button) findViewById(R.id.btnDepthHoleEstDesign);
         BTNChargeHole = (Button)findViewById(R.id.btnChargeHoleEstDesign);
         BTNVolume = (Button)findViewById(R.id.btnVolumeEstDesign);
         BTNSpecificCharge = (Button)findViewById(R.id.btnSpeChargeEstDesign);
+        TVDepthHole = (TextView) findViewById(R.id.tvDepthHoleEstDesign);
         TVChargeHole = (TextView)findViewById(R.id.tvChargeHoleEstDesign);
         TVVolume = (TextView)findViewById(R.id.tvVolumeEstDesign);
         TVSpecificCharge = (TextView)findViewById(R.id.tvSpeChargeEstDesign);
@@ -47,12 +53,36 @@ public class EstDesignPara extends AppCompatActivity {
         ETDeck = (EditText)findViewById(R.id.DeckEstDesign);
         ETStem = (EditText)findViewById(R.id.StemEstDesign);
 
+        BTNDepthHole.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(ETDepthHole.getText().toString().isEmpty())
+                {
+                    TVDepthHole.setText("Please enter Bench Height");
+                }
+                else if(ETSubgrade.getText().toString().isEmpty())
+                {
+                    TVDepthHole.setText("Please enter Subgrade value");
+                }
+                else
+                {
+                    double HoleDepth = Double.parseDouble(ETDepthHole.getText().toString());
+                    double Subgradee = Double.parseDouble(ETSubgrade.getText().toString());
+
+                    double ResDH = HoleDepth + Subgradee;
+
+                    DecimalFormat d0 = new DecimalFormat("#.####");
+                    TVDepthHole.setText(d0.format(ResDH) + " meters");
+                }
+            }
+        });
+
         BTNChargeHole.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(ETDepthHole.getText().toString().isEmpty())
                 {
-                    TVChargeHole.setText("Please enter Depth of Hole");
+                    TVChargeHole.setText("Please enter Bench Height");
                 }
                 else if(ETStem.getText().toString().isEmpty())
                 {
@@ -77,7 +107,9 @@ public class EstDesignPara extends AppCompatActivity {
                     double HoleDepth = Double.parseDouble(ETDepthHole.getText().toString());
                     double DiaExpo = Double.parseDouble(ETDiaExpo.getText().toString());
                     double DensityExpo = Double.parseDouble(ETDensityExpo.getText().toString());
-                    double ResCPH = (HoleDepth-Stem-Deck)*(Math.PI/4000.00)*DiaExpo*DiaExpo*DensityExpo;
+                    double Subgradee = Double.parseDouble(ETSubgrade.getText().toString());
+
+                    double ResCPH = (HoleDepth + Subgradee - Stem - Deck)*(Math.PI/4000.00)*DiaExpo*DiaExpo*DensityExpo;
 
                     DecimalFormat d1 = new DecimalFormat("#.####");
                     TVChargeHole.setText(d1.format(ResCPH) + " kg");
@@ -90,7 +122,7 @@ public class EstDesignPara extends AppCompatActivity {
             public void onClick(View v) {
                 if(ETDepthHole.getText().toString().isEmpty())
                 {
-                    TVVolume.setText("Please enter Depth of hole");
+                    TVVolume.setText("Please enter Bench Height");
                 }
                 else if(ETSubgrade.getText().toString().isEmpty())
                 {
@@ -123,7 +155,7 @@ public class EstDesignPara extends AppCompatActivity {
             public void onClick(View v) {
                 if(ETDepthHole.getText().toString().isEmpty())
                 {
-                    TVSpecificCharge.setText("Please enter Depth of Hole");
+                    TVSpecificCharge.setText("Please enter Bench Height");
                 }
                 else if(ETStem.getText().toString().isEmpty())
                 {
