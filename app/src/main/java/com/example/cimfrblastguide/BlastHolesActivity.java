@@ -116,7 +116,7 @@ public class BlastHolesActivity extends AppCompatActivity {
                     }
 
                     TVDisplayHole.append("\n \n \n");
-                    TVDisplayHole.append("Delay Window: "+maxDelay+" ms \n \n");
+                    TVDisplayHole.append("Holes fired within (Delay Window): "+maxDelay+" ms \n \n");
 
                     for (int i = 0; i < row; i++) {
                         for (int j = 0; j < cols; j++) {

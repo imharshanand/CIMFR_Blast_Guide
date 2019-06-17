@@ -156,6 +156,7 @@
                 android:textColor="@color/black"/>
             <EditText
                 android:id="@+id/StemEstDesign"
+                android:hint="@string/inm"
                 android:layout_width="200dp"
                 android:inputType="numberDecimal"
                 android:layout_gravity="center"
