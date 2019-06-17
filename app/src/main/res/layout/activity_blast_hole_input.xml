@@ -119,15 +119,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textStyle="bold"
         android:layout_marginEnd="8dp"
         android:text="@string/delayCol"
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/etDelayColBlastLay"
         app:layout_constraintEnd_toStartOf="@+id/etDelayColBlastLay"
-        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etDelayColBlastLay" />
+        app:layout_constraintTop_toTopOf="@+id/etDelayColBlastLay"
+        app:layout_constraintVertical_bias="0.423" />
 
     <EditText
         android:id="@+id/etDelayR01BlastLay"
@@ -209,10 +210,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:text="Delay Window"
-        android:textStyle="bold"
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/etMaxDelay"
         app:layout_constraintEnd_toStartOf="@+id/etMaxDelay"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/etMaxDelay" />
 
@@ -220,14 +222,16 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="10dp"
+        android:layout_marginTop="24dp"
         android:text="(Holes fired within)"
-        app:layout_constraintBottom_toBottomOf="@+id/etDelayR01BlastLay"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        android:textColor="@color/black"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etMaxDelay"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.96" />
 
 </android.support.constraint.ConstraintLayout>
