@@ -44,9 +44,6 @@
     <EditText
         android:id="@+id/etStemmingMassCharge"
         android:layout_width="wrap_content"
-        android:importantForAutofill="no"
-        tools:targetApi="o"
-        android:inputType="numberDecimal"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -55,12 +52,15 @@
         android:ems="10"
         android:gravity="center"
         android:hint="@string/inm"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBenchHeightMassCharge"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintTop_toBottomOf="@+id/etSubgradeMassCharge"
+        app:layout_constraintVertical_bias="0.044"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/textView18"
@@ -79,9 +79,6 @@
     <EditText
         android:id="@+id/etLinearChargeMassCharge"
         android:layout_width="wrap_content"
-        android:importantForAutofill="no"
-        tools:targetApi="o"
-        android:inputType="numberDecimal"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -90,12 +87,15 @@
         android:ems="10"
         android:gravity="center"
         android:hint="@string/kgm"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etStemmingMassCharge"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.065"
+        tools:targetApi="o" />
 
     <TextView
         android:id="@+id/textView19"
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Linear Charge"
+        android:text="Linear Charge Density"
         android:textStyle="bold"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/etLinearChargeMassCharge"
@@ -142,4 +142,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMassChargeRes"
         app:layout_constraintVertical_bias="0.668" />
+
+    <EditText
+        android:id="@+id/etSubgradeMassCharge"
+        android:layout_width="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/inm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBenchHeightMassCharge"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Subgrade"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etSubgradeMassCharge"
+        app:layout_constraintEnd_toStartOf="@+id/etSubgradeMassCharge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etSubgradeMassCharge" />
 </android.support.constraint.ConstraintLayout>

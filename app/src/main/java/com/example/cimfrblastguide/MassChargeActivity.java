@@ -13,6 +13,7 @@ public class MassChargeActivity extends AppCompatActivity {
     private EditText BenchHeight;
     private EditText Stemming;
     private EditText LinearCharge;
+    private EditText Subgrade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,23 +25,30 @@ public class MassChargeActivity extends AppCompatActivity {
         BenchHeight = (EditText)findViewById(R.id.etBenchHeightMassCharge);
         Stemming = (EditText)findViewById(R.id.etStemmingMassCharge);
         LinearCharge = (EditText)findViewById(R.id.etLinearChargeMassCharge);
+        Subgrade = (EditText)findViewById(R.id.etSubgradeMassCharge);
 
         Cal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                double SG;
+                if(Subgrade.getText().toString().isEmpty())
+                    SG =0.0;
+                else
+                    SG = Double.parseDouble(Subgrade.getText().toString());
+
                 if(BenchHeight.getText().toString().isEmpty() || Stemming.getText().toString().isEmpty() || LinearCharge.getText().toString().isEmpty())
                 {
                     Res.setText("Please enter all values");
                 }
-                else {
+                else
+                {
                     double BH = Double.parseDouble(BenchHeight.getText().toString());
                     double Stem = Double.parseDouble(Stemming.getText().toString());
                     double LC = Double.parseDouble(LinearCharge.getText().toString());
-                    double Qn = (BH - Stem) * LC;
+                    double Qn = (BH + SG - Stem) * LC;
                     Res.setText(Qn + " kg");
                 }
-
             }
         });
     }
